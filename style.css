@@ -1,0 +1,64 @@
+/* Style */
+
+body {
+  background-image: url("image.jpg"); /*I went for a wide background in order to support the ultrawide website with the cards. I wanted to go for a light colour palette similar to Rich Brown, who makes use of white text within light backgrounds. The image is from https://www.pexels.com/photo/body-of-water-1487031/ by James Wheeler*/
+  background-size: auto;
+  background-position: -20px; /*The image was placed too high, so I lowered it in order to see the imagery of the trees, grass and etc*/
+  background-repeat: no-repeat;
+  margin: 0;
+  height: 100%;
+  overflow-y: hidden;
+}
+
+.carousel {
+  margin: 60px auto; /*I had to continuously lower the margin so that the hyperlink to the background image on the bottom left could be seen.*/
+  width: 90%;
+  display: flex;
+  overflow-x: "";
+}
+
+.group {
+  display: flex; /*Without this line of code, the boxes wouldn't be next to each other. I wanted to create a website that you scrolled horizontally to see the questions, as I tried to imitate Rich Brown's portfolio at the bottom*/
+  align-items: center;
+  justify-content: center;
+  gap: 3em; /*I thought it looked neater to have a bit of a small gap in between the boxes*/
+}
+
+.card {
+  flex: 5 0 70px;
+  height: 490px; /*Altered the height so that it would fit the text inside. I didn't want any of the cards to be larger or wider than the other, nor did I want the font size to change in between the cards. I wanted it all to stay consistent, even at the cost of leftover spaces in between the boxes. I believed that within a website like this where you sidescrolled through boxes laid out next to one another, changes in size would make the reading experience more awkward and look inconsistent.*/
+  padding: 100px;
+  width: 300px;
+  background-color: rgba(0, 0, 0, 0.411);
+  -webkit-backdrop-filter: blur(
+    5px
+  ); /*One of my complaints I addressed in the questions was that the text in front of the light background could be hard to read sometimes. In order to differentiate from that whilst trying to follow the aesthetic of light colour palettes, I wanted to add a blurred glass-box look behind the text that darkened the background enough to make it readable whilst also making it my own art style.*/
+  backdrop-filter: blur(5px);
+  border: 2px solid rgb(255, 255, 255); /*I wanted to have a slight white border to contrast against the black blurred out background. I thought the difference in values would make the boxes pop out more and look cleaner. I ended up getting the code from a website named Stack Overflow, where people ask questions about coding and so forth. https://stackoverflow.com/questions/20321678/make-a-div-transparent-like-a-blurred-mirror*/
+  font-size: 18px;
+  font-family:
+    "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+  border-radius: 20px;
+  text-align: center;
+  align-content: center;
+}
+
+p {
+  color: aliceblue;
+}
+h3 {
+  color: aliceblue; /*Had to change the text colours for both p and h3 separately to white as they weren't grouped together.*/
+}
+h4 {
+  color: rgb(255, 255, 255);
+  font-family:
+    "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif; /*I preferred the rounder, softer fonts compared to the sharper fonts. I thought it would fit the aesthetic and tone of the website more.*/
+  display: inline-block;
+  background-color: rgba(0, 0, 0, 0.466);
+  -webkit-backdrop-filter: blur(5px);
+  backdrop-filter: blur(5px);
+  border: 2px solid rgb(255, 255, 255); /*I wanted the hyperlink to be readable but I also wanted it to mesh with the established art style, so I replicated the mirror blur effect here again.*/
+  padding: 5px;
+}
